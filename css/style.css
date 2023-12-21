@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&family=Montserrat:wght@300;400&display=swap');
+*{
+	box-sizing: border-box;
+	margin: 0;
+}
+html,
+body {
+	background-color:  #fffef3;
+  	font-family: 'Lato', sans-serif;
+	height: 100svh;
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	line-height: 1.8;
+}
+
+/* HEADER */
+
+header{
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 10%;
+	background-color: #CCA43B;
+	height: 60px;
+	flex-shrink: 0;
+}
+
+.logo{
+	height: 40px;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background: conic-gradient(white 75%, #CCA43B 25%);
+	rotate: 135deg;
+}
+
+.logo::before{
+	content: "";
+	height: 20px;
+	aspect-ratio: 1;
+	background-color: #CCA43B;
+	display: block;
+	transform: translate(50%, 50%);
+	border-radius: 50%;
+}
+
+.logo > a {
+	display: block;
+	width: 100%;
+	aspect-ratio: 1;
+	border-radius: 50%;
+}
+
+header > a {
+	height:40px;
+}
+
+header svg {
+	height: 40px;
+	width: 40px;
+}
+
+.shownav{
+	display: none;
+	height: 40px;
+	margin: 0;
+	margin-right: 15px;
+}
+
+.shownav:hover + .navbar {
+	color: red;
+}
+
+.navbar{
+	display: block;
+	transition: all .3s ease-out;
+}
+
+.navbar ul {
+	list-style: none;
+	padding: 0;
+}
+
+.navbar li{
+	display: inline-block;
+}
+
+.navbar li a {
+	color: white;
+	text-decoration: none;
+	opacity: .6;
+	font-weight: 700;
+	margin: 20px;
+	transition: all .3s ease-out;
+}
+
+.navbar li a:hover, nav li a.currentpage {
+	opacity: 1;
+}
+
+.nompage{
+	display: none;
+	margin: 0;
+	margin-left: 15px;
+	font-weight:700px;
+}
+
+.table-inscription tr.nom-champs td{
+	background-color: #FBF7EF;
+}
+
+.table-inscription td{
+	border: solid black 2px;
+	padding: 5px;
+	margin: 0;
+}
+
+main {
+	position: relative;
+	flex-grow: 1;
+	margin: 20px 140px;
+}
+
+.stats {
+	margin-top: 50px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	column-gap: 40px;
+	row-gap: 40px;
+}
+	
+/*.div1 { 
+	grid-area: 1 / 1 / 2 / 2;
+	line-height: 2;
+}
+.div2 { grid-area: 1 / 2 / 2 / 3; }
+.div3 { grid-area: 2 / 1 / 3 / 2; }
+.div4 { grid-area: 2 / 2 / 3 / 3; }
+.div5 { grid-area: 3 / 1 / 4 / 2; }
+.div6 { grid-area: 3 / 2 / 4 / 3; }
+.div7 { grid-area: 4 / 1 / 5 / 2; }
+.div8 { grid-area: 4 / 2 / 5 / 3; } */
+
+.card{
+	padding: 30px;
+	background-color: #EAD9AE;
+	border-radius: 10px;
+	transition: all .2s cubic-bezier(0,0,.33,1.51);
+}
+.card li{
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+
+.card:hover{
+	filter: drop-shadow(0 0 10px #242F40);
+	transform: scale(1.05);
+}
+
+.card h3 {
+	margin-bottom: 15px;
+}
+
+.form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	justify-content: space-around;
+	background-color: #EBD6AD;
+	filter: drop-shadow(0 0 20px #D8DFE9);
+	border-radius: 15px;
+	width: 40dvw;
+	left: 50%;
+	transform: translate(-50%,0);
+	
+}
+
+.form > h4 {
+	margin-top: 40px;
+	margin-bottom: -20px;
+	font-size: 18px;
+}
+
+.formajouter input#fin{
+	margin-bottom: 50px;
+}
+
+.formajouter{
+	width: 60%;
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.formajouter label{
+	position: relative;
+	left: 0;
+	font-size: 15px;
+}
+
+.formajouter input{
+	width: 100%;
+	background-color: #EBD6AD;
+	border: none;
+	transition: .2s;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.formajouter select{
+	width: 100%;
+	background-color: #EBD6AD;
+	border: none;
+	border-bottom: solid #D7AE5B 2px;
+	transition: .2s;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.formajouter input:hover{
+	filter: drop-shadow(0 0 10px #CF9D3A);
+	border-bottom: solid #B5872C 2px;
+}
+
+.formajouter select:hover{
+	filter: drop-shadow(0 0 10px #CF9D3A);
+	border-bottom: solid #B5872C 2px;
+}
+
+.formajouter input[type=radio]{
+	border: none;
+	width: auto;
+	margin-right: 10px;
+	transform: scale(1.5);
+}
+
+.formajouter input[type=text]{
+	border-bottom: solid #D7AE5B 2px;
+}
+
+.formajouter input[type=date]{ 
+	border-bottom: solid #D7AE5B 2px;
+}
+
+.formajouter input[type=submit]{
+	background-color: #D7AE5B;
+	border-radius: 15px;
+	text-align: center;
+	width: 70%;
+	margin: auto;
+	margin-top: 40px;
+}
+input[type="submit"].demandeperiodeessai{
+	width: 80%;
+}
+
+.formajouter input[type=submit]:hover{
+	transform: scale(1.05);
+	background-color: #B5872C;
+	border: none;
+}
+
+footer{
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-shrink: 0;
+	height: 160px;
+	background-color: #363636;
+	color: white;
+	font-style: bold;
+}
+
+footer .credits{
+	display: flex;
+	align-items: center;
+}
+
+h1{
+	font-size: 48px;
+}
+
+.paragDescrition {
+	font-size: 24px;
+}
+
+h2{
+	margin-bottom: 50px;
+	font-size: 38px;
+}
+
+.service{
+	margin-bottom: 20px;
+	padding: 20px;
+	display: block;
+}
+
+.service:hover{
+	transform: scale(1.005);
+}
+
+.service h4{
+	margin-bottom: 10px;
+	display: inline;
+	font-size: larger;
+}
+
+.nomservice{
+	display: inline-block;
+}
+
+.acces{
+	font-style: italic;
+	font-size: 12px;
+}
+
+div.notif[open]{
+	position: absolute;
+	top: 100px;
+	right: 20px;
+	background-color: #CCA43B;
+	opacity: 0.5;
+	border-radius: 15px;
+	padding: 20px;
+	animation: slideSide 7s forwards;
+}
+
+div.notif > p{
+	opacity: 1;
+	color:white;
+	cursor: default;
+}
+
+@media screen and (max-width: 1200px) {
+	.form {
+		width: 60%;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.form {
+		width: 100%;
+	}
+	.formajouter{
+		width: 90%;
+	}
+	header{
+		justify-content:space-between;
+		align-items: center;
+		padding: 5px;
+		padding-right: 0px;
+	}
+	header a.contact, .logo{
+		display: none;
+	}
+	.navbar {
+		display: none;
+		position: absolute;
+		background-color: transparent;
+		backdrop-filter: blur(10px);
+		top: 60px;
+		right:0;
+		z-index: 100;
+	}
+	.navbar li{
+		display: block;
+		padding: 10px;
+	}
+	.navbar li a {
+		color: black;
+	}
+	.navbar li:hover{
+		background-color: #EAD9AE;
+	}
+	main{
+		margin: 20px;
+		line-height: 1;
+	}
+	.shownav, .nompage{
+		display: block;
+		color: white;
+	}
+	.stats{
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.card {
+		line-height: 1.8;
+	}
+}
+
+@media screen and (max-width: 412){
+	header {
+		height: 90px;
+	}
+	main{
+		margin: 20px;
+	}
+}
+
+@keyframes slideSide{
+	0%{
+		transform: translateX(200%);
+		opacity: 0;
+	}
+	20%{
+		transform: translateX(0%);
+		opacity: 1;
+	}
+	80%{
+		transform: translateX(0%);
+		opacity: 1;
+	}
+	100%{
+		transform: translateX(200%);
+		opacity: 0;
+	}
+}
